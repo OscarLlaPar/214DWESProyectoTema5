@@ -7,11 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>OLP-DWES - Muestra Ejercicio 0</title>
     </head>
     <body>
         <?php
-        // put your code here
+            highlight_file('../codigoPHP/ejercicio00')
         ?>
     </body>
 </html>

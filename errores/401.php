@@ -7,11 +7,9 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>OLP-DWES - Muestra Ejercicio 2</title>
+        <title></title>
     </head>
     <body>
-        <?php
-            highlight_file('../codigoPHP/ejercicio02')
-        ?>
+        <h1>Error: Acceso restringido</h1>
     </body>
 </html>

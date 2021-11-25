@@ -1,3 +1,16 @@
+<?php
+        /*
+            * Ejercicio 1
+            * @author Óscar Llamas Parra - oscar.llapar@educa.jcyl.es - https://github.com/OscarLlaPar
+            * Última modificación: 25/11/2021
+        */
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="Contenido restringido"');
+    header("HTTP/1.0 401 Unauthorized");
+exit;
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,42 +19,11 @@
     </head>
     <body>
         <?php
-        /*
-            * Ejercicio 1
-            * @author Óscar Llamas Parra - oscar.llapar@educa.jcyl.es - https://github.com/OscarLlaPar
-            * Última modificación: 25/11/2021
-        */
-        $aErrores= [
-            'usuario' => null,
-            'password' => null
-        ];
-        $aRespuestas= [
-            'usuario' => null,
-            'password' => null
-        ];
-        $entradaOK = true;
-        if(isset($_REQUEST['enviar'])){
+            echo "Nombre de usuario: ".$_SERVER['PHP_AUTH_USER']."<br>";
+            echo "Hash de la contraseña: ".hash("sha256",$_SERVER['PHP_AUTH_PW']);
             
-        }
-        else{
-            $entradaOK=false;
-        }
-        if($entradaOK){
-            $aRespuestas= [
-            'usuario' => $_REQUEST['usuario'],
-            'password' => $_REQUEST['password']
-            ];
-        }
-        else{
-        ?>
-        <form>
-            <fieldset>
-                <legend>Log in</legend>
-                
-            </fieldset>
-        </form>
-        <?php
-        }
+            unset($_SERVER["PHP_AUTH_USER"]);
+            unset($_SERVER["PHP_AUTH_PW"]); 
         ?>
     </body>
 </html>
