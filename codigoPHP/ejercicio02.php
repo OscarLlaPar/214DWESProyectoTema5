@@ -17,9 +17,8 @@ else{
         $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         $consulta=<<<QUERY
-                SELECT T01_CodUsuario FROM T01_Usuario
+                SELECT T01_CodUsuario, T01_Password FROM T01_Usuario
                 WHERE T01_CodUsuario ='$_SERVER[PHP_AUTH_USER]'
-                AND T01_Password ='$_SERVER[PHP_AUTH_PW]'
                 QUERY;
     
         $resultadoConsulta = $miDB->prepare($consulta);
@@ -28,6 +27,11 @@ else{
         if(is_null($oRegistro)){
             header('WWW-Authenticate: Basic realm="Contenido restringido"');
             header("HTTP/1.0 401 Unauthorized");
+            exit;
+        }
+        else{
+            echo "Nombre de usuario: ".$_SERVER['PHP_AUTH_USER']."<br>";
+            echo "Hash de la contraseña: ".hash("sha256",$_SERVER['PHP_AUTH_PW']);
         }
     }    
     //Gestión de errores relacionados con la base de datos
@@ -50,8 +54,7 @@ else{
     </head>
     <body>
         <?php
-            echo "Nombre de usuario: ".$_SERVER['PHP_AUTH_USER']."<br>";
-            echo "Hash de la contraseña: ".hash("sha256",$_SERVER['PHP_AUTH_PW']);
+            
         ?>
     </body>
 </html>
