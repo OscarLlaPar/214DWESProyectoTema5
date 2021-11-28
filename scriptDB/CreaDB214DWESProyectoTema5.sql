@@ -13,13 +13,13 @@ flush privileges;
 use DB214DWESProyectoTema5;
 
 create table if not exists T01_Usuario(
-    T01_CodUsuario varchar(8) primary key not null,
-    T01_Password varchar(8) not null,
+    T01_CodUsuario varchar(8) primary key,
+    T01_Password varchar(64) not null,
     T01_DescUsuario varchar(255) not null,
-    T01_FechaHoraUltimaConexion datetime not null,
-    T01_NumConexiones int unsigned not null,
-    T01_Perfil enum('usuario', 'administrador') not null default 'usuario',
-    T01_ImagenUsuario blob
+    T01_FechaHoraUltimaConexion datetime default now(),
+    T01_NumConexiones int unsigned not null default 1,
+    T01_Perfil enum('usuario','administrador') default 'usuario',
+    T01_ImagenUsuario blob null
 )engine=InnoDB;
 
 create table if not exists T02_Departamento(
