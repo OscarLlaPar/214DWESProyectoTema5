@@ -15,21 +15,21 @@
             <div class="ejercicio">
                 <div class="num">0</div>
                 <p>Mostrar el contenido de las variables superglobales y phpinfo()</p>
-                <a><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
-                <a><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
+                <a href="codigoPHP/ejercicio00.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
+                <a href="mostrarcodigo/muestraEjercicio00.php"><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
             </div>
             <div class="ejercicio">
                 <div class="num">1</div>
                 <p>Desarrollo de un control de acceso con identificación del usuario basado en la función header()</p>
-                <a><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
-                <a><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
+                <a href="codigoPHP/ejercicio01.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
+                <a href="mostrarcodigo/muestraEjercicio01.php"><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
             </div>
             <div class="ejercicio">
                 <div class="num">2</div>
                 <p>Desarrollo de un control de acceso con identificación del usuario basado en la función header() y
 en el uso       de una tabla “Usuario” de la base de datos. (PDO)</p>
-                <a><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
-                <a><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
+                <a href="codigoPHP/ejercicio02.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
+                <a href="mostrarcodigo/muestraEjercicio02.php"><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
             </div>
         </main>
         <footer>

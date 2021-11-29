@@ -17,21 +17,23 @@ else{
         $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         $consulta=<<<QUERY
-                SELECT T01_CodUsuario, T01_Password FROM T01_Usuario
+                SELECT T01_Password FROM T01_Usuario
                 WHERE T01_CodUsuario ='$_SERVER[PHP_AUTH_USER]'
                 QUERY;
     
         $resultadoConsulta = $miDB->prepare($consulta);
         $resultadoConsulta->execute();
         $oRegistro = $resultadoConsulta->fetch(PDO::FETCH_OBJ);
-        if(($oRegistro->T01_CodUsuario == $_SERVER['PHP_AUTH_USER']) && ($oRegistro->T01_Password == hash('sha256', $_SERVER['PHP_AUTH_USER'].$_SERVER['PHP_AUTH_PW']))){
+        if($oRegistro->T01_Password != hash('sha256', $_SERVER['PHP_AUTH_USER'].$_SERVER['PHP_AUTH_PW'])){
+            
+            header('WWW-Authenticate: Basic realm="Contenido restringido"'); 
+            header("HTTP/1.0 401 Unauthorized"); 
+            exit;
+        }
+        else{
+            echo "<h1>Logueado con éxito!</h1>";
             echo "Nombre de usuario: ".$_SERVER['PHP_AUTH_USER']."<br>";
             echo "Hash de la contraseña: ".hash("sha256",$_SERVER['PHP_AUTH_PW']);
-        }
-        else{ // Si no existe, se vuelven a pedir las credenciales hasta que se introduzcan correctamente
-            header('WWW-Authenticate: Basic realm="Contenido restringido"'); //Muestra de nuevo la cabecera de autentificacion
-            header("HTTP/1.0 401 Unauthorized"); //Redirige con el estado Unauthorized
-            exit;
         }
     }    
     //Gestión de errores relacionados con la base de datos

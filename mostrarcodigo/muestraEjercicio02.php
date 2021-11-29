@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            highlight_file('../codigoPHP/ejercicio02')
+            highlight_file('../codigoPHP/ejercicio02.php');
         ?>
     </body>
 </html>
