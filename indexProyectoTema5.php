@@ -31,6 +31,11 @@ en el uso       de una tabla “Usuario” de la base de datos. (PDO)</p>
                 <a href="codigoPHP/ejercicio02.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
                 <a href="mostrarcodigo/muestraEjercicio02.php"><div class="boton"><img src="webroot/img/iconoMostrar.png"></div></a>
             </div>
+            <div class="ejercicio">
+                <div class="num">3</div>
+                <p>LoginLogout</p>
+                <a href="../214DWESLoginLogoutTema5/index.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
+            </div>
         </main>
         <footer>
             <p>
