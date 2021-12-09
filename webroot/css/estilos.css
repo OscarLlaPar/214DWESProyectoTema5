@@ -8,6 +8,7 @@ body{
 }
 header{
     background-color:#0A001A;
+    text-align: center;
     display: block;
     position:relative;
     color: #767BFF;
@@ -125,4 +126,11 @@ img{
     font-weight: bold;
     padding-top: 10px;
     border-right: solid #00FFDD 10px;
+}
+a{
+    
+    color: #00FFDD;
+}
+a:hover{
+    color:purple;
 }

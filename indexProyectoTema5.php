@@ -9,6 +9,7 @@
         <header>
             <h1>Desarrollo Web en Entorno Servidor</h1>
             <h4>Tema 5</h4>
+            <a href="mostrarcodigo/muestraDB.php">Ver scripts y archivos de configuración de la base de datos</a>
             <a href="../ProyectoDWES/indexProyectoDWES.php"><div class="cuadro" id="arriba">&#60;</div></a>
         </header>
         <main>
@@ -34,7 +35,7 @@ en el uso       de una tabla “Usuario” de la base de datos. (PDO)</p>
             <div class="ejercicio">
                 <div class="num">3</div>
                 <p>LoginLogout</p>
-                <a href="../214DWESLoginLogoutTema5/index.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
+                <a href="../214DWESLoginLogoutTema5/indexLoginLogoutTema5.php"><div class="boton"><img src="webroot/img/iconoPlay.png"></div></a>
             </div>
         </main>
         <footer>
