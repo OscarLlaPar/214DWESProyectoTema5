@@ -16,36 +16,37 @@
             <h1>$_SERVER</h1>
             <pre>
             <?php
-                print_r($_SERVER);
+                print_r($_SERVER); //Mostrado de $_SERVER
             ?>
             </pre>
             <h1>$_SESSION</h1>
             <pre>
             <?php
-                print_r(!isset($_SESSION)?"Variable no inicializada":$_SESSION);
+                //Como puede salir un mensaje de error si no esta inicializada, en su lugar muestra un mensaje
+                print_r(!isset($_SESSION)?"Variable no inicializada":$_SESSION); //Mostrado de $_SESSION
             ?>
             </pre>
             <h1>$_COOKIE</h1>
             <pre>
             <?php
-                print_r($_COOKIE);
+                print_r($_COOKIE); //Mostrado de $_COOKIE
             ?>
             </pre>
             <h1>$_REQUEST</h1>
             <pre>
             <?php
-                print_r($_REQUEST);
+                print_r($_REQUEST); //Mostrado de $_REQUEST
             ?>
             </pre>
             <h1>$_FILES</h1>
             <pre>
             <?php
-                print_r($_FILES);
+                print_r($_FILES); //Mostrado de $_FILES
             ?>
             </pre>
             <h1>phpinfo()</h1>
             <?php
-                phpinfo();
+                phpinfo(); //Mostrado del phpinfo
             ?>
         </main>
     </body>

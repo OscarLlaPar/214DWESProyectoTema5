@@ -40,8 +40,8 @@ en el uso       de una tabla “Usuario” de la base de datos. (PDO)</p>
         </main>
         <footer>
             <p>
-                Óscar Llamas Parra &nbsp;
-                <a href="https://github.com/OscarLlaPar/" target="__blank"><img src="webroot/img/github.png" alt="Github"></img></a>
+                <a href="https://daw214.ieslossauces.es/">Óscar Llamas Parra </a>
+                <a href="https://github.com/OscarLlaPar/214DWESProyectoTema5" target="__blank"><img src="webroot/img/github.png" alt="Github"></img></a>
             </p>
             <p>
                 DAW 2
